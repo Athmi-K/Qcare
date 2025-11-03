@@ -18,7 +18,8 @@ const Login = () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       console.log("Logged in user:", userCredential.user);
-      navigate("/home"); // redirect after login
+      // Redirect to home page (queue booking form) after login
+      navigate("/home", { replace: true });
     } catch (err) {
       console.error("Login error:", err);
       // Handle different error types
