@@ -4,10 +4,11 @@ import './App.css';
 import LandingPage from './components/LandingPage';
 import Login from './components/Login';
 import Register from './components/Register';
-import Home from './components/Home'; // Updated path to components
+import Home from './components/Home';
 import PatientDashboard from './components/PatientDashboard';
 import HealthTips from './pages/HealthTips';
 import ProtectedRoute from './components/ProtectedRoute';
+import AdminLogin from './components/AdminLogin';
 import AdminDashboard from './components/AdminDashboard';
 import Analytics from './components/Analytics';
 
@@ -20,8 +21,9 @@ function App() {
   <Route path="/home" element={<ProtectedRoute><Home /></ProtectedRoute>} />  {/* Home page route */}
   <Route path="/patient" element={<ProtectedRoute><PatientDashboard /></ProtectedRoute>} />
   <Route path="/health-tips" element={<ProtectedRoute><HealthTips /></ProtectedRoute>} />
-      <Route path="/admin" element={<AdminDashboard />} />
-      <Route path="/analytics" element={<Analytics />} />
+      <Route path="/admin/login" element={<AdminLogin />} />
+      <Route path="/admin" element={<ProtectedRoute><AdminDashboard /></ProtectedRoute>} />
+      <Route path="/analytics" element={<ProtectedRoute><Analytics /></ProtectedRoute>} />
     </Routes>
   );
 }

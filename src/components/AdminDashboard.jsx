@@ -750,19 +750,28 @@ const AdminDashboard = () => {
       {/* Header with Analytics Button */}
       <header className="header">
         <div className="header-content">
-          <div className="logo" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
-            <div className="logo-icon">
-              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect x="18" y="8" width="4" height="24" fill="#2563eb"/>
-                <rect x="8" y="18" width="24" height="4" fill="#2563eb"/>
-                <circle cx="20" cy="20" r="18" stroke="#2563eb" strokeWidth="2"/>
-              </svg>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%" }}>
+            <div className="logo" onClick={() => navigate("/")} style={{ cursor: "pointer" }}>
+              <div className="logo-icon">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="18" y="8" width="4" height="24" fill="#2563eb"/>
+                  <rect x="8" y="18" width="24" height="4" fill="#2563eb"/>
+                  <circle cx="20" cy="20" r="18" stroke="#2563eb" strokeWidth="2"/>
+                </svg>
+              </div>
+              <h1 className="hospital-name">Admin Dashboard</h1>
             </div>
-            <h1 className="hospital-name">Admin Dashboard</h1>
-          </div>
-          
-          <div className="header-actions">
-            <button onClick={() => navigate("/")} className="logout-button">
+            
+            <button onClick={() => navigate("/")} style={{ 
+              padding: "8px 16px", 
+              borderRadius: "4px", 
+              backgroundColor: "#2563eb", 
+              color: "white", 
+              border: "none", 
+              cursor: "pointer", 
+              fontWeight: "500",
+              marginLeft: "auto"
+            }}>
               Back to Home
             </button>
           </div>
